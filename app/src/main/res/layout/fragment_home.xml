@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorWhite">
+
+    <TextView
+        android:background="@color/colorWhite"
+        android:text="@string/home_text"
+        android:id="@+id/text_home"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:layout_marginTop="15dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <!--Item 1-->
+        <LinearLayout
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_width="350dp"
+            android:layout_height="130dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_marginRight="5dp"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:background="@drawable/zinger"/>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/item1_zinger"
+                    android:layout_alignParentTop="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1. Zinger Burger"
+                    android:textStyle="bold"
+                    android:layout_margin="3dp"
+                    />
+
+                <TextView
+                    android:id="@+id/item1Price"
+                    android:layout_below="@+id/item1_zinger"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="3dp"
+                    android:text="Price:500/-"/>
+
+                <LinearLayout
+                    android:layout_below="@+id/item1Price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/decQty1"
+                        android:layout_width="40dp"
+                        android:layout_height="48dp"
+                        android:layout_margin="3dp"
+                        android:text="-"
+                        android:textSize="25sp"
+                        android:onClick="decQuantity1"/>
+
+                    <TextView
+                        android:id="@+id/qty1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="3dp"
+                        android:text="0"
+                        android:textSize="40sp" />
+
+                    <Button
+                        android:id="@+id/incQty1"
+                        android:layout_width="40dp"
+                        android:layout_height="48dp"
+                        android:text="+"
+                        android:onClick="incQuantity1"
+                        android:textSize="25sp"
+                        android:layout_margin="3dp"/>
+                </LinearLayout>
+
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+
+
+                <Button
+                    android:id="@+id/btn1"
+                    android:layout_marginTop="25dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:onClick="addItem1ToCart"
+                    android:background="@drawable/cart"/>
+            </RelativeLayout>
+        </LinearLayout>
+
+        <!--Item 2-->
+        <LinearLayout
+            android:layout_marginTop="3dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_width="350dp"
+            android:layout_height="120dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_marginRight="5dp"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:background="@drawable/burger"/>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/item2_hamburger"
+                    android:layout_alignParentTop="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2. Mighty Burger"
+                    android:textStyle="bold"
+                    android:layout_margin="3dp"
+                    />
+
+                <TextView
+                    android:id="@+id/item2Price"
+                    android:layout_below="@+id/item2_hamburger"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="3dp"
+                    android:text="Price:650/-"/>
+
+                <LinearLayout
+                    android:layout_below="@+id/item2Price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/minusQt2"
+                        android:layout_width="40dp"
+                        android:layout_height="48dp"
+                        android:layout_margin="3dp"
+                        android:text="-"
+                        android:onClick="decQuantity2"
+                        android:textSize="25sp" />
+
+                    <TextView
+                        android:id="@+id/qty2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="3dp"
+                        android:text="0"
+                        android:textSize="40sp" />
+
+                    <Button
+                        android:layout_width="40dp"
+                        android:layout_height="48dp"
+                        android:text="+"
+                        android:textSize="25sp"
+                        android:onClick="incQuantity2"
+                        android:layout_margin="3dp"/>
+                </LinearLayout>
+
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+
+
+                <Button
+                    android:id="@+id/btn2"
+                    android:layout_marginTop="25dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:onClick="addItem2ToCart"
+                    android:background="@drawable/cart"/>
+            </RelativeLayout>
+        </LinearLayout>
+
+        <!--Item 3-->
+        <LinearLayout
+            android:layout_marginTop="3dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_width="350dp"
+            android:layout_height="120dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_marginRight="5dp"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:background="@drawable/afghani"/>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/item3_afghani"
+                    android:layout_alignParentTop="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="3. Afghani Burger"
+                    android:textStyle="bold"
+                    android:layout_margin="3dp"
+                    />
+
+                <TextView
+                    android:id="@+id/item3Price"
+                    android:layout_below="@+id/item3_afghani"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="3dp"
+                    android:text="Price:120/-"/>
+
+                <LinearLayout
+                    android:layout_below="@+id/item3Price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/minusQt3"
+                        android:layout_width="40dp"
+                        android:layout_height="48dp"
+                        android:layout_margin="3dp"
+                        android:text="-"
+                        android:onClick="decQuantity3"
+                        android:textSize="25sp" />
+
+                    <TextView
+                        android:id="@+id/qty3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="3dp"
+                        android:text="0"
+                        android:textSize="40sp" />
+
+                    <Button
+                        android:layout_width="40dp"
+                        android:layout_height="48dp"
+                        android:text="+"
+                        android:textSize="25sp"
+                        android:onClick="incQuantity3"
+                        android:layout_margin="3dp"/>
+                </LinearLayout>
+
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+
+
+                <Button
+                    android:id="@+id/btn3"
+                    android:layout_marginTop="25dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:onClick="addItem3ToCart"
+                    android:background="@drawable/cart"/>
+            </RelativeLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/cart"
+        android:layout_marginLeft="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cart: "/>
+
+    <Button
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/checkout2"
+        android:id="@+id/checkoutButton"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:onClick="openCheckoutActivity" />
+
+</LinearLayout>
